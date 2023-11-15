@@ -7,7 +7,6 @@
 |nickname                    |string|null: false              |
 |email                       |string|null: false, unique: true|
 |encrypted_password          |string|null: false              |
-|confirm_encrypted_password  |string|null: false              |
 |last_name                   |string|null: false              |
 |first_name                  |string|null: false              |
 |last_kana_name              |string|null: false              |
@@ -56,12 +55,12 @@
 |Column            |Type      |Options                       |
 |------------------|----------|------------------------------|
 |postal_code       |string    |null: false                   |
-|prefecture        |string    |null: false                   |
+|prefecture_id     |integer   |null: false                   |
 |municipal_district|string    |null: false                   |
 |street_address    |string    |null: false                   |
 |building_name     |string    |------------------------------|
-|tel               |string    |null: false,                  |
-|user              |references|null: false,                  |
+|tel               |string    |null: false                   |
+|purchase_record   |references|null: false                   |
 
 ### Association
 - belongs_to :purchase_record
