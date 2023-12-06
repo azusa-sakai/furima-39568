@@ -1,15 +1,20 @@
 class ItemsController < ApplicationController
   def index
-    @items = Items.all
+    @items = Item.all
   end
 
   def new
-    @item = Items.new
+    @item = Item.new
   end
 
   def create
-    Items.create(item_params)
+    Item.create(item_params)
     redirect_to '/'
   end
 
+  private
+
+  def items_params
+    params.require(:items).permit(:content, :image).merge(user_id: current_user.id)
+  end
 end
