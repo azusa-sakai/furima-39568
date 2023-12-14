@@ -26,7 +26,7 @@
 |description             |text      |null: false                   |
 |category_id             |integer   |null: false                   |
 |condition_id            |integer   |null: false                   |
-|shipping_fee_burden_id  |integer   |null: false                   |
+|shipping_fee_burden_id  |integer   |null: false                   |配送料
 |prefecture_id           |integer   |null: false                   |
 |days_until_shipping_id  |integer   |null: false                   |
 |price                   |integer   |null: false                   |
